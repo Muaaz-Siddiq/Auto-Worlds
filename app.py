@@ -8,6 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
+# DataBase connections ( set your credentials in .env file )
 cluster = MongoClient(f"mongodb+srv://{os.getenv('USER_NAME')}:{os.getenv('PASSWORD')}@cluster0.vvcgq.mongodb.net/?retryWrites=true&w=majority")
 db = cluster[os.getenv('DATABASE_NAME')]
 collection = db[os.getenv('COLLECTION_NAME')]
@@ -57,6 +58,7 @@ def details(name):
     try:
         data = collection.find_one({"Name":name})
 
+        # In Data base the stars are given in array type. Therefore we use aggregiation to get the avergae rating
         star_avg = collection.aggregate([
         {
             '$unwind': {
@@ -82,7 +84,7 @@ def details(name):
         stars = list(star_avg)
 
 
-
+        # Get realted cars with respect to company excluding the current car
         relcar = collection.aggregate([
         {
             '$match': {
@@ -105,6 +107,7 @@ def details(name):
 
 # #          --------------------------------comparison----------------------------------
 
+        # Comapring the car without any javascripts calls that's why using list.
 @app.route('/compare')
 def compare():
     try:
