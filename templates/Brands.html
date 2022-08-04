@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='/images/logo1.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="/index"><img src="{{url_for('static',filename='/images/logo1.png')}}" width="155px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li id="ho"><a href='/index'>Home</a></li>
+                    <li id="ho"><a href='/Brands'>Brands</a></li>
+                    <li id="ho"><a href='/compare'>Comparison</a></li>
+                    <li id="ho"><a href="/about">About</a></li>
+                </ul>
+            </nav>
+        
+            <img src="{{url_for('static',filename='/images/menu.png')}}" class="menu-icon" onclick="menutoggle()">
+        </div>
+      
+    </div>
+    
+    <div class="small-container">
+        <div class="row row-2">
+            <h1 class="title">Brands</h1>
+        </div>
+        <div  class="row">
+         <div id="box" class="col-4">
+            <a href="/all-products/Audi"><img src="{{url_for('static',filename='/images/Audi-logo-2009-1920x1080.png')}}"></a> 
+            <a href="/all-products/Audi"><h2>Audi Cars</h2></a>
+            
+            
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/BMW"><img src="{{url_for('static',filename='/images/bmw-logo-1997-1200x1200.png')}}"></a> 
+            <a href="/all-products/BMW"><h2>BMW Cars</h2></a>
+            
+            
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/Toyota"><img src="{{url_for('static',filename='/images/toyota-logo-1989-1400x1200.png')}}"></a> 
+            <a href="/all-products/Toyota"><h2>Toyota Cars</h2></a>
+            
+           
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/KIA"><img src="{{url_for('static',filename='/images/Kia-logo-2560x1440.png')}}"></a> 
+            <a href="/all-products/KIA"><h2>Kia Cars</h2></a>
+            
+           
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/Hyundai"><img src="{{url_for('static',filename='/images/Hyundai-logo-grey-2560x1440.png')}}"></a> 
+            <a href="/all-products/Hyundai"><h2>Hyundai Cars</h2></a>
+            
+            
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/chevrolet"><img src="{{url_for('static',filename='/images/580b57fcd9996e24bc43c479.png')}}"></a> 
+            <a href="/all-products/chevrolet"><h2>Chevrolet Cars</h2></a>
+            
+           
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/Honda"><img src="{{url_for('static',filename='/images/Honda.png')}}"></a> 
+            <a href="/all-products/Honda"><h2>Honda Cars</h2></a>
+            
+           
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/Lamborghini"><img src="{{url_for('static',filename='/images/lambrigini.png')}}"></a> 
+            <a href="/all-products/Lamborghini"><h2>Lamborghini Cars</h2></a>
+            
+            
+         </div>
+         <div id="box" class="col-4">
+            <a href="/all-products/Nissan"><img src="{{url_for('static',filename='/images/nissan.png')}}"></a> 
+            <a href="/all-products/Nissan"><h2>Nissan Cars</h2></a>
+            
+           
+         </div>
+        </div>
+        
+    </div>
+    <!------offer----->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2"><img src="{{url_for('static',filename='/images/3-2-car-free-download-png.png')}}" class="offer-img"></div>
+            <div class="col-2">
+                
+                <h1>BMW i8 Car</h1>
+                <small>Make it yours by choosing from a variety of interchangeable Car
+                    and unique faces like the legend of qin, hey
+                    and many more, that fit your style</small>
+                    
+            </div>
+        </div>
+    </div>
+</div>
+<!----footer----->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>
+                    Download App for Android and ios mobile phone.
+                </p>
+                <div class="app-logo">
+                    <img src="{{url_for('static',filename='/images/play-store.png')}}">
+                    <img src="{{url_for('static',filename='/images/app-store.png')}}">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="{{url_for('static',filename='/images/logo2.png')}}">
+                <p>
+                    Our Purpose Is To Sustainably Make the Pleausre and Benefits of Cars Accessible to the Many.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <p>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <p>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021</p>
+    </div>
+</div>
+<!-----js for toggle menu-->
+<script>
+    var MenuItems= document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px")
+        {
+            MenuItems.style.maxHeight="200px"
+        }
+        else
+        {
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
+</body>
+</html>

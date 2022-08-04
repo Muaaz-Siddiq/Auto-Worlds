@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/png" href="static/images/logo1.png">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index"><img src="static/images/logo1.png" width="155px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li id="ho"><a href="/index">Home</a></li>
+                    <li id="ho"><a href="/Brands">Brands</a></li>
+                    <li id="ho"><a href="/compare">Comparison</a></li>
+                    <li id="ho"><a href="/about">About</a></li>
+                </ul>
+            </nav>
+           
+            <img src="static/images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+      
+    </div>
+<!---------account-page------>
+<div class="about-section">
+    <h1 id="About-h1">About Us</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis molestias delectus tenetur officiis aspernatur unde!</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, aliquid.</p>
+    <h2 id="Contact-heading"><u id="Line-orange">Contact Details</u></h2>
+    <div class="About-all">
+        <div class="About-logo">
+            <span><i class="fas fa-phone"></i></span>
+            <span id="About-contact">&nbsp; +504 86 735282</span>
+        </div>
+        <div class="About-logo">
+           <span><i class="far fa-envelope"></i></span> 
+           <span id="About-contact">&nbsp; autoworld@example.com</span>
+        </div>
+        <div class="About-logo">
+            <span><i class="fas fa-map-marker-alt"></i></span>
+            <span id="About-contact">&nbsp; Sheikh Zayed Road 0605 9المنارة 73<br>  Dubai - United Arab Emirates</span>
+        </div>
+    </div>
+    <img id="about-cars" src="static/images/contact.png">
+  </div>
+  
+  
+  
+
+<!----footer----->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>
+                    Download App for Android and ios mobile phone.
+                </p>
+                <div class="app-logo">
+                    <img src="static/images/play-store.png">
+                    <img src="static/images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="static/images/logo2.png">
+                <p>
+                    Our Purpose Is To Sustainably Make the Pleausre and Benefits of Cars Accessible to the Many.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <p>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <p>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021</p>
+    </div>
+</div>
+<!-----js for toggle menu-->
+<script>
+    var MenuItems= document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px")
+        {
+            MenuItems.style.maxHeight="200px"
+        }
+        else
+        {
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
+
+ <!--Bootstrap js-->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+ integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+ crossorigin="anonymous"></script>
+<script src="static/js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='/images/logo1.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index"> <img src="{{url_for('static',filename='/images/logo1.png')}}" width="155px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li id="ho"><a href="/index">Home</a></li>
+                    <li id="ho"><a href="/Brands">Brands</a></li>
+                    <li id="ho"><a href="/compare">Comparison</a></li>
+                    <li id="ho"><a href="/about">About</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </div>
+    <!------singel products detail------>
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src={{data['image1']}} width="100%"
+                    id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src={{data['image2']}} width="100%"
+                            class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src={{data['image3']}} width="100%"
+                            class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src={{data['image4']}} width="100%"
+                            class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src={{data['image5']}} width="100%"
+                            class="small-img">
+                    </div>
+                </div>
+
+                <div class="Engine">
+                    <h4>Engine: &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;{{data['engine']}} </h4>
+                </div>
+                <div class="Engine">
+                    <h4>Body Type: &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;{{data['body_type']}} </h4>
+                </div>
+                <div class="rating">
+                    <h4>Stars: &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;{{stars[0]['Rating']}}<span   class="fa fa-star checked"></span></h4>
+                </div>
+                <div>
+                    <hr>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <p id="opar">Home / Car</p>
+                <h1>{{data['Name']}}</h1>
+                <h4>${{data['price']}}</h4>
+                
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn shadow-none " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    On Road Price
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header py-0" id="hbo">
+                                <h1 class="modal-title" id="staticBackdropLabel">{{Name}}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h4>Vehicle Price</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Price:
+                                        </div>
+                                        <div class="col">
+                                            ${{data['price']}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h4>Tax and Other Charges</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Tax:
+                                        </div>
+                                        <div class="col">
+                                            ${{data['tax']}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Registeration Fees:
+                                        </div>
+                                        <div class="col">
+                                            ${{data['reg_fees']}}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Plate Charges:
+                                        </div>
+                                        <div class="col">
+                                            ${{data['plate_charge']}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h4>On Road Price</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Total Price:
+                                        </div>
+                                        <div class="col">
+                                            ${{data['price'] + data['tax'] + data['reg_fees'] + data['plate_charge']}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Product Detail <span class="fa fa-indent"></span></h3>
+                <br>
+                <p>{{data['description']}}</p>
+            </div>
+        </div>
+    </div>
+    <!---title--->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2 class="title">Related Cars</h2>
+
+
+        </div>
+    </div>
+
+
+    <!-----product---->
+    <div class="small-container">
+
+        <div class="row">
+            {% for related_car in related_car %}
+            <div class="col-4">
+                <a href="/detalis/{{related_car['Name']}}"><img
+                        src={{related_car['image1']}}></a>
+                <a href="/detalis/{{related_car['Name']}}">
+                    <h4>{{related_car['Name']}}</h4>
+                </a>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+    <!----footer----->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>
+                        Download App for Android and ios mobile phone.
+                    </p>
+                    <div class="app-logo">
+                        <img src="{{url_for('static',filename='/images/play-store.png')}}">
+                        <img src="{{url_for('static',filename='/images/app-store.png')}}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{{url_for('static',filename='/images/logo2.png')}}">
+                    <p>
+                        Our Purpose Is To Sustainably Make the Pleausre and Benefits of Cars Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <p>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <p>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021</p>
+        </div>
+    </div>
+    <!-----js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!---js for product gallery-->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+        SmallImg[0].onclick = function () {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function () {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            ProductImg.src = SmallImg[3].src;
+        }
+
+
+
+    </script>
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='/js/bootstrap.js')}}"></script>
+    <script>var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })</script>
+</body>
+
+</html>

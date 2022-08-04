@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="{{url_for('static',filename='js/dependent-selects.js')}}"></script>
+    <link rel="dependent-selects" href="{{url_for('static',filename='js/dependent-selects.js')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+    <link rel="icon" type="image/png" href="{{url_for('static',filename='/images/logo1.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .dropbtn {
+  background-color: white;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.align-right {
+        text-align: right;
+        border: 0;
+      }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: white;}
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index"> <img src="{{url_for('static',filename='images/logo1.png')}}" width="155px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li id="ho"><a href='/index'>Home</a></li>
+                    <li id="ho"><a href='/Brands'>Brands</a></li>
+                    <li id="ho"><a href='/compare'>Comparison</a></li>
+                    <li id="ho"><a href="/about">About</a></li>
+                </ul>
+            </nav>
+            <img src="{{url_for('static',filename='/images/menu.png')}}" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <!------singel products detail------>
+    <div class="container">
+        <div class="row gx-5">
+          <div class="col-md">
+          <h2>Select Your Car</h2>
+          <hr>
+            <div class="dropdown">
+  <button class="dropbtn"><img src="static/images/honda1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Civic">Honda Civic</a>
+                          <a href="/compare/Crv">Honda CR-V</a>
+                          <a href="/compare/City">Honda City</a>
+                          <a href="/compare/Amaze">Honda Amaze</a>
+                          <a href="/compare/Wr v">Honda WR-V</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/chevy1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Silverado">SILVERADO</a>
+                          <a href="/compare/Tahoe">Tahoe</a>
+                          <a href="/compare/Trailblazer">Trailblazer</a>
+                          <a href="/compare/Malibu">MALIBU</a>
+                          <a href="/compare/Corvette">CORVETTE</a>
+  </div>
+</div>   
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/lamborigini1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Sian roadster">Sian Roadster</a>
+                          <a href="/compare/Huracan evo">Huracan Evo</a>
+                          <a href="/compare/Aventador svj">Aventador SVJ</a>
+                          <a href="/compare/Sc20">SC20</a>
+                          <a href="/compare/Huracan evo rwd spyder">Huracan Evo RWD Spyder</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/nissan1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Frontier x gear">FRONTIER X-GEAR</a>
+                          <a href="/compare/Sentra">SENTRA</a>
+                          <a href="/compare/Murano">MURANO</a>
+                          <a href="/compare/Leaf">LEAF</a>
+                          <a href="/compare/Kicks">KICKS</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Kia1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Sportage">KIA Sportage</a>
+                          <a href="/compare/Seltos">KIA Seltos</a>
+                          <a href="/compare/Telluride">KIA Telluride</a>
+                          <a href="/compare/Ev6">KIA EV6</a>
+                          <a href="/compare/Carnival mpv">KIA Carnival MPV</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Hyundai1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Kona n">KONA N</a>
+                          <a href="/compare/Sonata">Sonata</a>
+                          <a href="/compare/Azera">Azera</a>
+                          <a href="/compare/Tucson">TUCSON</a>
+                          <a href="/compare/Palisade">PALISADE</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/toyota1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/Fortuner">Toyota Fortuner</a>
+                          <a href="/compare/Corolla">Toyota Corolla</a>
+                          <a href="/compare/Venza">Toyota Venza</a>
+                          <a href="/compare/C-HR">Toyota C-HR</a>
+                          <a href="/compare/Land Cruiser">Toyota Land Cruiser</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Audi1.png"></button>
+  <div class="dropdown-content">
+<a href="/compare/A7l">Audi A7L</a>
+<a href="/compare/A61">Audi A61</a>
+<a href="/compare/Q4">Audi Q4</a>
+<a href="/compare/Ai">Audi AI</a>
+<a href="/compare/Q4 sportback">Audi Q4 sportback</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/bmw1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compare/I8">BMW I8</a>
+                          <a href="/compare/I4">BMW i4 (G26)</a>
+                          <a href='/compare/M5'>BMW M5</a>
+                          <a href="/compare/X3">BMW X3</a>
+                          <a href="/compare/F 30">BMW F30 3</a>
+  </div>
+</div>
+<hr>
+                    <h1>{{Name}}</h1>
+                    <img src={{image}} width="100%"
+                        id="ProductImg">
+                    <div class="Engine cc4">
+                        <h4>Price: 
+                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;$ {{price}} </h4>
+                    </div>
+                    <div class="Engine">
+                        <h4>Engine: &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp; {{engine}} </h4>
+                    </div>
+                    <div class="Engine">
+                        <h4>Body Type: &nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp;&nbsp;
+                            &nbsp;{{bodytype}} </h4>
+                    </div>
+                    <div class="Engine">
+                        <h4>Ratings: &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;{{star}} <span class="fa fa-star checked"></span> </h4>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+          </div>
+          
+          <div class="col-md">
+          <h2>Select Your Car</h2>
+          <hr>
+            <div class="dropdown">
+  <button class="dropbtn"><img src="static/images/honda1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Civic">Honda Civic</a>
+                          <a href="/compares/Crv">Honda CR-V</a>
+                          <a href="/compares/City">Honda City</a>
+                          <a href="/compares/Amaze">Honda Amaze</a>
+                          <a href="/compares/Wr v">Honda WR-V</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/chevy1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Silverado">SILVERADO</a>
+                          <a href="/compares/Tahoe">Tahoe</a>
+                          <a href="/compares/Trailblazer">Trailblazer</a>
+                          <a href="/compares/Malibu">MALIBU</a>
+                          <a href="/compares/Corvette">CORVETTE</a>
+  </div>
+</div>   
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/lamborigini1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Sian roadster">Sian Roadster</a>
+                          <a href="/compares/Huracan evo">Huracan Evo</a>
+                          <a href="/compares/Aventador svj">Aventador SVJ</a>
+                          <a href="/compares/Sc20">SC20</a>
+                          <a href="/compares/Huracan evo rwd spyder">Huracan Evo RWD Spyder</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/nissan1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Frontier x gear">FRONTIER X-GEAR</a>
+                          <a href="/compares/Sentra">SENTRA</a>
+                          <a href="/compares/Murano">MURANO</a>
+                          <a href="/compares/Leaf">LEAF</a>
+                          <a href="/compares/Kicks">KICKS</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Kia1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Sportage">KIA Sportage</a>
+                          <a href="/compares/Seltos">KIA Seltos</a>
+                          <a href="/compares/Telluride">KIA Telluride</a>
+                          <a href="/compares/Ev6">KIA EV6</a>
+                          <a href="/compares/Carnival mpv">KIA Carnival MPV</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Hyundai1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Kona n">KONA N</a>
+                          <a href="/compares/Sonata">Sonata</a>
+                          <a href="/compares/Azera">Azera</a>
+                          <a href="/compares/Tucson">TUCSON</a>
+                          <a href="/compares/Palisade">PALISADE</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/toyota1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/Fortuner">Toyota Fortuner</a>
+                          <a href="/compares/Corolla">Toyota Corolla</a>
+                          <a href="/compares/Venza">Toyota Venza</a>
+                          <a href="/compares/C-HR">Toyota C-HR</a>
+                          <a href="/compares/Land Cruiser">Toyota Land Cruiser</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/Audi1.png"></button>
+  <div class="dropdown-content">
+<a href="/compares/A7l">Audi A7L</a>
+<a href="/compares/A61">Audi A61</a>
+<a href="/compares/Q4">Audi Q4</a>
+<a href="/compares/Ai">Audi AI</a>
+<a href="/compares/Q4 sportback">Audi Q4 sportback</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn"><img src="static/images/bmw1.png"></button>
+  <div class="dropdown-content">
+                          <a href="/compares/I8">BMW I8</a>
+                          <a href="/compares/I4">BMW i4 (G26)</a>
+                          <a href='/compares/M5'>BMW M5</a>
+                          <a href="/compares/X3">BMW X3</a>
+                          <a href="/compares/F 30">BMW F30 3</a>
+  </div>
+</div>
+<hr>
+                    <h1>{{Name1}}</h1>
+                    <img src={{image1}} width="100%"
+                        id="ProductImg">
+        
+               
+                    <div class="Engine cc4">
+                        <h4>Price: &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;$ {{price1}} </h4>
+                    </div>
+                    <div class="Engine">
+                        <h4>Engine: &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;{{engine1}} </h4>
+                    </div>
+                    <div class="Engine">
+                    
+                        <h4>Body Type: &nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp;&nbsp;
+                            &nbsp;{{bodytype1}}</h4>
+                    </div>
+                    <div class="Engine">
+                        <h4>Ratings: &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;{{star1}} <span class="fa fa-star checked"></span> </h4>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+          </div>
+        </div>
+      
+    
+     
+    </div>
+    <div class="container">
+  <div class="row">
+    <div class="col">
+      <a href='/comparebutton' id="compBtn1" class="btn">Compare</a>
+    </div>
+  </div>
+</div>
+
+    <!----footer----->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>
+                        Download App for Android and ios mobile phone.
+                    </p>
+                    <div class="app-logo">
+                        <img src="{{url_for('static',filename='images/play-store.png')}}">
+                        <img src="{{url_for('static',filename='images/app-store.png')}}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{{url_for('static',filename='images/logo2.png')}}">
+                    <p>
+                        Our Purpose Is To Sustainably Make the Pleausre and Benefits of Cars Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <p>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <p>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021</p>
+        </div>
+    </div>
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.js')}}"></script>
+    <!-----js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!---js for product gallery-->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+        SmallImg[0].onclick = function () {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function () {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            ProductImg.src = SmallImg[3].src;
+        }
+
+
+
+    </script>
+    <script src="{{url_for('static',filename='js/dependent-selects.js')}}"></script>
+</body>
+
+</html>
